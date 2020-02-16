@@ -1,0 +1,46 @@
+<div id="container" style="width: 50%; margin: 0 auto; margin-top: 50px;">
+    <div class="card">
+        <div class="card-body">
+            <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        #name="ngModel"
+                        [(ngModel)]="productoService.productoElegido.name"
+                        placeholder="Escribe el nombre del producto">
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        class="form-control"
+                        name="desc"
+                        #desc="ngModel"
+                        [(ngModel)]="productoService.productoElegido.desc"
+                        placeholder="Escribe la descripción del producto">
+                </div>
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        class="form-control"
+                        name="price"
+                        #price="ngModel"
+                        [(ngModel)]="productoService.productoElegido.price"
+                        placeholder="Escribe el precio del producto">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-secondary" type="submit">
+                        <i class="fas fa-plus-circle"></i>&nbsp; Añadir producto
+                    </button>
+                    &nbsp;
+                    <button class="btn btn-secondary" type="reset"
+                        (click)="resetForm()">
+                        <i class="fas fa-sync-alt"></i>&nbsp; Limpiar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

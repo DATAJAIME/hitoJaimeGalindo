@@ -1,0 +1,22 @@
+a{
+    color: white;
+    text-decoration: dashed;
+    float: left;
+}
+
+#nav{
+    width: max-content;
+    margin: 0 auto;
+}
+
+#nombre{
+    width: max-content;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cookies, #git{
+    width: fit-content;
+    margin: 0 auto;
+}

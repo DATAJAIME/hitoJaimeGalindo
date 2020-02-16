@@ -1,0 +1,21 @@
+<div id="container">
+    <div class="card">
+        <div class="card-body">
+            <h6 class="text-center">Lista de Productos</h6>
+            <table class="table table-sm table-hover">
+                <tbody>
+                    <tr *ngFor="let producto of listaProductos">
+                        <td>{{producto.name}}</td>
+                        <td>{{producto.desc}}</td>
+                        <td>{{producto.price}}</td>
+                        <td>
+                            <button class="btn btn-danger text-white" (click)="eliminar(producto.$key)">
+                                <i class="fa fa-trash-alt"></i> Borrar
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
